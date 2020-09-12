@@ -30,6 +30,8 @@
       <%= f.label :website %>
       <%= f.url_field :website, class: 'form-control' %>
 
+      <label><%= f.radio_button :gender, "male" %>male</label>
+      <label><%= f.radio_button :gender, "female" %>female</label>
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
   </div>
