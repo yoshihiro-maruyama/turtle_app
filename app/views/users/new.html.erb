@@ -6,17 +6,29 @@
     <%= form_with(model: @user, local: true) do |f| %>
       <%= render 'shared/error_messages' %>
 
-      <%= f.label :name %>
+      <%= f.label :name %><span>(※must be filled)</span>
       <%= f.text_field :name, class: 'form-control' %>
 
-      <%= f.label :email %>
+      <%= f.label :user_name, "User name" %>
+      <%= f.text_field :user_name, class: 'form-control' %>
+
+      <%= f.label :email %><span>(※must be filled)</span>
       <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :password %>
+      <%= f.label :password %><span>(※must be filled)</span>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :password_confirmation, "Confirmation" %><span>(※must be filled)</span>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.label :introduction, "Introduce about your self" %>
+      <%= f.text_field :introduction, class: 'form-control' %>
+
+      <%= f.label :phonenumber %>
+      <%= f.telephone_field :phonenumber, class: 'form-control' %>
+
+      <%= f.label :website %>
+      <%= f.url_field :website, class: 'form-control' %>
 
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
