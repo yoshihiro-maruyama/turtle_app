@@ -1,4 +1,6 @@
 <% provide(:title, 'Sign up') %>
+
+<div class="users-new-wrapper">
 <h1>Sign up</h1>
 
 <div class="row">
@@ -30,9 +32,14 @@
       <%= f.label :website %>
       <%= f.url_field :website, class: 'form-control' %>
 
-      <label><%= f.radio_button :gender, "male" %>male</label>
-      <label><%= f.radio_button :gender, "female" %>female</label>
+      <%= f.label :gender, "male", class: "gender-label" %>
+      <%= f.radio_button :gender, "male" %>
+
+      <%= f.label :gender, "female", class: "gender-label" %>
+      <%= f.radio_button :gender, "female" %>
+
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
   </div>
+</div>
 </div>
