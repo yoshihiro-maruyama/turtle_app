@@ -1,0 +1,8 @@
+<div>
+  <h3>Microposts</h3>
+  <ol class="microposts">
+    <%= render @micropost %>
+    <%= link_to "delete", @micropost, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+  </ol>
+</div>
