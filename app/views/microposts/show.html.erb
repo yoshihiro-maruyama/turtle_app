@@ -2,7 +2,9 @@
   <h3>Microposts</h3>
   <ol class="microposts">
     <%= render @micropost %>
+    <% if current_user?(@micropost.user) %>
     <%= link_to "delete", @micropost, method: :delete,
                                        data: { confirm: "You sure?" } %>
+    <% end %>
   </ol>
 </div>
