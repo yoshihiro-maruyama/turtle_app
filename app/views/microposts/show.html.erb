@@ -7,4 +7,14 @@
                                        data: { confirm: "You sure?" } %>
     <% end %>
   </ol>
+
+  <%= form_with(model: [@micropost, @comment], method: :post) do |f| %>
+    <%= f.text_field :content %>
+    <% f.hidden_field :micropost_id, value: @micropost.id %>
+    <%= f.submit 'comment' %>
+  <% end %>
+
+  <% @comments.each do |comment| %>
+    <%= comment.content %>
+  <% end %>
 </div>
