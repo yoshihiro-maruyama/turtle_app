@@ -1,6 +1,8 @@
 class Micropost < ApplicationRecord
   belongs_to :user
   has_many :comments, dependent: :destroy
+  has_many :likes
+  has_many :users, through: :likes
   has_one_attached :image
   default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
@@ -12,5 +14,9 @@ class Micropost < ApplicationRecord
  # 表示用のリサイズ済み画像を返す
   def display_image
   image.variant(resize_to_fit: [200, 200])
+  end
+
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
   end
 end
