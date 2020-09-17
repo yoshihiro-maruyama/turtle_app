@@ -8,9 +8,11 @@
     <% end %>
   </ol>
   
+  <% if !current_user?(@micropost.user) %>
   <div id="like-btn-<%= @micropost.id %>">
    <%= render 'likes/like', post: @micropost %>
   </div>
+  <% end %>
 
   <%= form_with(model: [@micropost, @comment], method: :post) do |f| %>
     <%= f.text_field :content %>
