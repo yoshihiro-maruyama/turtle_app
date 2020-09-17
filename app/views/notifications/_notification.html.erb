@@ -1,2 +1,3 @@
 <% visitor = notification.visitor %>
 <div><%= visitor.name %>さんがコメントしました。</div>
+<%= link_to "delete", notification_path(notification), method: :delete %>

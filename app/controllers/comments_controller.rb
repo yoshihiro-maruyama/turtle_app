@@ -4,8 +4,10 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.new(comment_params)
     @comment.micropost_id = params[:micropost_id]
     @micropost = @comment.micropost
-    @comment.save
     @micropost.create_notification_comment!(current_user, @comment.id)
+    
+    @comment.save
+    
     redirect_back(fallback_location: root_path)
   end
 
