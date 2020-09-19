@@ -12,9 +12,6 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
-body {
-  padding-top: 50px;
-}
 
 section {
   overflow: auto;
@@ -28,22 +25,9 @@ textarea {
   text-align: center;
 }
 
-.center h1 {
-  margin-bottom: 10px;
-}
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
 
 h2 {
   font-size: 1.2em;
@@ -99,8 +83,7 @@ p {
 
 // footer
 footer {
-  margin-top: 5px;
-  border-top: 1px solid 
+  border-top: 1px solid;
 }
 
 .footer-wrapper {
@@ -111,10 +94,57 @@ footer {
 
 .users-new-wrapper {
   padding-top: 50px;
+  background-image: url(new-page.jpg);
+  height: 700px;
 }
 
-.gender-label {
+.new-form-wrapper {
+  margin: 0 100px 10px 500px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+#user-gender-male {
+  display: inline-block;
+}
+
+.form-content {
+  padding: 0 30px 10px 30px;
+
+}
+
+// users show
+.user-show-wrapper {
+  padding-top: 50px;
+}
+
+.user-logo {
+  width: 30%;
+  height: 300px;
   float: left;
+}
+
+
+
+.user-info {
+  width: 60%;
+  height: 300px;
+  float: right;
+}
+
+.user-info h1 {
+  font-family: Century;
+}
+
+.fa-female {
+  font-size: 20px;
+  color: #FF69B4;
+  padding: 10px;
+}
+
+.fa-male {
+  font-size: 20px;
+  color: #00BFFF;
 }
 
 /* miscellaneous */

@@ -1,10 +1,9 @@
 <% provide(:title, 'Sign up') %>
 
 <div class="users-new-wrapper">
+<div class="new-form-wrapper">
 <h1>Sign up</h1>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="form-content">
     <%= form_with(model: @user, local: true) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
@@ -23,19 +22,14 @@
       <%= f.label :password_confirmation, "Confirmation" %><span>(※must be filled)</span>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.label :introduction, "Introduce about your self" %>
-      <%= f.text_field :introduction, class: 'form-control' %>
-
-      <%= f.label :phonenumber %>
-      <%= f.telephone_field :phonenumber, class: 'form-control' %>
-
-      <%= f.label :website %>
-      <%= f.url_field :website, class: 'form-control' %>
-
+      <div class="gender-label">
       <%= f.label :gender, "male", class: "gender-label" %>
+      </div>
       <%= f.radio_button :gender, "male" %>
 
+      <div class="gender-label">
       <%= f.label :gender, "female", class: "gender-label" %>
+      </div>
       <%= f.radio_button :gender, "female" %>
 
       <%= f.submit "Create my account", class: "btn btn-primary" %>

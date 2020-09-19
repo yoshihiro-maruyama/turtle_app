@@ -1,22 +1,35 @@
 <% provide(:title, @user.user_name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
+<div class="user-show-wrapper">
+  <div class="user-logo">
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.user_name %>
       </h1>
-      <section class="stats">
-        <%= render 'shared/stats' %>
-      </section>
+      <div class="follow-content">
+      <%= render 'shared/stats' %>
       <%= render 'follow_form' if logged_in? %>
-    </section>
-    <%= @user.gender %>
+      </div>
+  </div>
+
+  <div class="user-info">
+    <h1>
+      <%= @user.user_name %>
+    </h1>
+
+    <div class="user-gender">
+    <% if @user.gender == "female" %>
+    <span class="fa fa-female"></span>
+    <% elsif @user.gender == "male" %>
+    <span class="fa fa-male"></span>
+    <% end %>
+    </div>
+
     <%= @user.introduction %>
     <%= @user.phonenumber %>
     <%= @user.website %>
-  </aside>
-  <div class="col-md-8">
+  </div>
+
+
+  <div class="">
     <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">
