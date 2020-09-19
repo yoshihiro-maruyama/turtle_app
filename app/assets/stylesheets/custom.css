@@ -4,12 +4,10 @@
 
 /* mixins, variables, etc. */
 
-$gray-medium-light: #eaeaea;
 
-@mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
+
+* {
+  box-sizing: border-box;
 }
 
 
@@ -27,16 +25,6 @@ textarea {
 
 
 /* typography */
-
-
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: #777;
-}
 
 p {
   font-size: 1.1em;
@@ -61,36 +49,76 @@ p {
   text-decoration: none;
 }
 
-// home
+/* home */
 .home-wrapper {
-  background-image: url(home-page.jpg.png);
+  background-image: url(home-page-2.jpg);
   background-size: cover;
   height: 650px;
 }
 
 .home-wrapper h1 {
-  padding-top: 250px;
+  padding-top: 200px;
   font-size: 50px;
-}
+  padding-bottom: 60px;
+} 
 
 .home-message {
   opacity: 0.7;
 }
 
-.btn:hover {
-  opacity: 1;
+.btn-lg {
+  display: inline-block;
+  width: 150px;
+  height: 100px;
+  margin-right: 90px;
 }
 
-// footer
+.click-me {
+  position: relative;
+   margin-bottom: 2em;
+   padding: 1.5rem 2rem;
+   border-radius: 10px;
+   background: #FFFAFA;
+   width: 200px;
+   margin-left: 400px;
+   font-family: 'SignPainter',sans-serif;
+   font-size: 20px
+ }
+ 
+ .click-me:before,
+ .click-me:after {
+   position: absolute;
+   content: '';
+   border-radius: 50%;
+   background: #FFFAFA;
+ }
+ 
+ .click-me:before {
+   right: 30px;
+   bottom: 40px;
+   width: 30px;
+   height: 30px;
+ }
+ 
+ .click-me:after {
+   right: 50px;
+   bottom: 70px;
+   width: 15px;
+   height: 15px;
+ }
+
+
+/* footer */
 footer {
-  border-top: 1px solid;
+  margin-top: 2px;
+  border-top: 2px solid;
 }
 
 .footer-wrapper {
   text-align: center;
 }
 
-// signup page
+/* signup page */
 
 .users-new-wrapper {
   padding-top: 50px;
@@ -104,18 +132,16 @@ footer {
   border-radius: 10px;
 }
 
-#user-gender-male {
-  display: inline-block;
-}
 
 .form-content {
   padding: 0 30px 10px 30px;
 
 }
 
-// users show
+/* users show */
 .user-show-wrapper {
   padding-top: 50px;
+  border-bottom: 1px solid;
 }
 
 .user-logo {
@@ -124,28 +150,86 @@ footer {
   float: left;
 }
 
+.user-logo h1 {
+ height: 80px;
+}
 
+.stats {
+  padding-bottom: 30px;
+}
 
 .user-info {
-  width: 60%;
+  width: 70%;
   height: 300px;
-  float: right;
 }
 
 .user-info h1 {
   font-family: Century;
+  float: left;
+  padding-left: 200px;
 }
 
-.fa-female {
-  font-size: 20px;
-  color: #FF69B4;
-  padding: 10px;
+.user-microposts h3 {
+  text-align: center;
+  padding-bottom: 20px;
 }
 
-.fa-male {
-  font-size: 20px;
-  color: #00BFFF;
+#micropost {
+  float: left;
+  width: 25%;
+  height: 300px;
+  margin-right: 70px
 }
+
+
+/* microposts/new */
+
+.container h1 {
+  margin-top: 55px;
+  text-align: center;
+}
+
+.about-user h2 {
+  font-family: Century;
+}
+
+.image-wrapper img {
+  width: 300px;
+  height: 300px;
+}
+
+.image-wrapper {
+  width: 40%;
+  float: left;
+}
+
+.comment-wrapper {
+  float: right;
+  width: 50%;
+}
+
+.comment {
+  margin-bottom: 5px;
+}
+
+.liked {
+  color: #FF1493;
+}
+
+.not-like {
+  color: #D3D3D3;
+}
+
+/* notification/index */
+.notification-bar {
+  padding-top: 100px;
+}
+
+.one-notice {
+  border-bottom: 1px solid;
+}
+
+
 
 /* miscellaneous */
 

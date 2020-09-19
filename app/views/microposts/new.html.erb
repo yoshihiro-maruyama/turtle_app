@@ -1,23 +1,30 @@
 <% provide(:title, 'New post') %>
 
-<div class="users-new-wrapper">
+<div class="container">
 <h1>Create new post</h1>
 
+<div class="about-user">
+<h2>
 <%= link_to gravatar_for(current_user, size: 50), current_user %>
-<h1><%= current_user.name %></h1>
+</h2>
+<h2><%= current_user.name %></h2>
 <span><%= link_to "view my profile", current_user %></span>
 <span><%= pluralize(current_user.microposts.count, "micropost") %></span>
+</div>
 
 <%= form_with(model: @micropost, local: true) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
     <%= f.text_area :content, placeholder: "Compose new micropost..." %>
-  </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
-  <span class="image">
+    <span class="image">
   <%= f.file_field :image, accept: "image/jpeg,image/png" %>
   </span>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+  
 <% end %>
+
+</div>
 
 <script type="text/javascript">
   $("#micropost_image").bind("change", function() {
