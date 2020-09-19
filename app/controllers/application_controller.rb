@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
+  before_action :set_search
+
 
   def logged_in_user
     unless logged_in?
@@ -12,5 +14,12 @@ class ApplicationController < ActionController::Base
   def correct_user
     @micropost = current_user.microposts.find_by(id: params[:id])
     redirect_to root_url if @micropost.nil?
+  end
+
+ 
+  def set_search
+    #@search = Article.search(params[:q])
+    @search = Micropost.ransack(params[:q]) #ransackメソッド推奨
+    @search_articles = @search.result
   end
 end

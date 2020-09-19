@@ -5,6 +5,12 @@
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home",   root_path %></li>
             <% if logged_in? %>
+            <li>
+          <%= search_form_for @search, url: microposts_path do |f| %>
+            <span><%= f.text_field :content , class: 'search-form' %></span>
+            <span><%= f.submit ("🔍") , class: 'search-btn'%></span>
+          <% end %>
+          </li>
             <li><%= link_to "#{current_user.user_name}", current_user %></li>
             <li><%= link_to notifications_path do %>
               <span class="fa fa-bell"></span>

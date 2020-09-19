@@ -47,6 +47,20 @@ p {
   text-decoration: none;
 }
 
+.search-form {
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 150px;
+}
+
+ .search-btn {
+  margin-top: 20px;
+  width: 30px; 
+  float: right;
+  border-radius: 50%;
+  background-color: white;
+}
+
 /* home */
 .home-wrapper {
   background-image: url(home-page-2.jpg);
