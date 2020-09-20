@@ -7,7 +7,7 @@
             <% if logged_in? %>
             <li>
           <%= search_form_for @search, url: microposts_path do |f| %>
-            <span><%= f.text_field :content , class: 'search-form' %></span>
+            <span><%= f.text_field :content_cont , class: 'search-form' %></span>
             <span><%= f.submit ("🔍") , class: 'search-btn'%></span>
           <% end %>
           </li>

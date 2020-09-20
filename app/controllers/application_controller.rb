@@ -20,6 +20,6 @@ class ApplicationController < ActionController::Base
   def set_search
     #@search = Article.search(params[:q])
     @search = Micropost.ransack(params[:q]) #ransackメソッド推奨
-    @search_articles = @search.result
+    @microposts = @search.result
   end
 end

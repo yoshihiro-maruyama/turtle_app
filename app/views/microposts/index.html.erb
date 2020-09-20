@@ -1,3 +1,6 @@
-<% @search_articles.each do |article| %>
-<%= article %>
+<div class="container">
+<h1>Result</h1>
+<% @microposts.each do |micropost| %>
+<%= render @microposts %>
 <% end %>
+</div>

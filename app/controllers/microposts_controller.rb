@@ -3,7 +3,6 @@ class MicropostsController < ApplicationController
   before_action :correct_user, only: :destroy
 
   def index
-    @articles = Micropost.all
   end
 
   def show
