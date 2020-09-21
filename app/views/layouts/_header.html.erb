@@ -1,0 +1,37 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "turtle app", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <%if logged_in? %>
+          <li>
+            <%= search_form_for @search, url: microposts_path do |f| %>
+            <span><%= f.text_field :content_cont , class: 'search-form' %></span>
+            <span><%= f.submit ("🔍") , class: 'search-btn'%></span>
+            <% end %>
+          </li>
+          <li><%= link_to "#{current_user.user_name}", current_user %></li>
+          <li><%= link_to notifications_path do %>
+            <span class="fa fa-bell"></span>
+            <% end %>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Account <b class="caret"></b>
+            </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "All users", users_path %></li>
+            <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+            <li><%= link_to "Create post", new_micropost_path %></li>
+            <li class="divider"></li>
+            <li>
+              <%= link_to "Log out", logout_path, method: :delete %>
+            </li>
+          </ul>
+            <% else %>
+            <li><%= link_to "Log in", login_path %></li>
+            <% end %>
+        </ul>
+      </nav>
+  </div>
+</header>
