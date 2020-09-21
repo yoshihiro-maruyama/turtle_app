@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+目標の期日が来ましたので、提出させていただきたいと思います。
+いくつか実装できていない機能があります。
+特にfacebookログインについてはエラーのままになっております。申し訳ありません。
 
-Things you may want to cover:
+成長できたと感じる点
+エラー文の読解力が上がったと思います。エラーの意味について検索しなくてもだいたいどこでなぜエラーを起こしているか予想をつけられることが多くなりました。
+また、メッソドやインスタンス変数などに入っている情報やデータが次にどこでどのように使われているか追えるようになりました。予想と違っていた場合にエラーになったりするので、デバッグも行いやすくなりました。
 
-* Ruby version
+能力不足と感じる点
+余裕がなく、テストがまったく書けていません。ただ、その重要性についてはデバッグや本当に機能が実装できているのか確かめる時間の短縮という意味で必要なものであると実感することができました。Rspecをしっかり学習していきます。
+Scssの知識が足りず、レイアウト変更の際、よく構文エラーにあたりました。そのため、cssへ変更してレイアウトを整えることにしました。
+cssより使いこなせれば、見やすいコードにできるなどのメリットがあるようなので、Scssの理解も深めていきます。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+何卒よろしくお願いいたします。

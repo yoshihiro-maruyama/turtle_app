@@ -3,7 +3,6 @@
     <%= link_to "turtle app", root_path, id: "logo" %>
       <nav>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Home",   root_path %></li>
           <%if logged_in? %>
           <li>
             <%= search_form_for @search, url: microposts_path do |f| %>

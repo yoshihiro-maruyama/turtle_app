@@ -151,6 +151,7 @@ footer {
 }
 
 /* users show */
+
 .user-show-wrapper {
   padding-top: 50px;
   border-bottom: 1px solid;
@@ -172,13 +173,16 @@ footer {
 
 .user-info {
   width: 70%;
-  height: 300px;
 }
 
 .user-info h1 {
   font-family: Century;
-  float: left;
   padding-left: 200px;
+}
+
+.introduction {
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .user-microposts h3 {
@@ -190,7 +194,7 @@ footer {
   float: left;
   width: 25%;
   height: 300px;
-  margin-right: 70px
+  margin-right: 70px;
 }
 
 
@@ -233,6 +237,7 @@ footer {
 }
 
 /* notification/index */
+
 .notification-bar {
   padding-top: 100px;
 }
@@ -241,10 +246,8 @@ footer {
   border-bottom: 1px solid;
 }
 
-
 /* Users index */
 
-
 .delete-btn {
-  margin-top: 70px
+  margin-top: 70px;
 }
