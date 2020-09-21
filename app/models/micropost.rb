@@ -14,7 +14,7 @@ class Micropost < ApplicationRecord
 
  # 表示用のリサイズ済み画像を返す
   def display_image
-  image.variant(resize_to_fit: [200, 200])
+    image.variant(resize_to_fit: [200, 200])
   end
 
   def liked_by?(user)
@@ -45,6 +45,4 @@ class Micropost < ApplicationRecord
     end
     notification.save if notification.valid?
   end
-
-  
 end

@@ -1,9 +1,11 @@
 <% if @micropost.liked_by?(current_user) %>
-   <%= link_to(micropost_add_path(@micropost), method: :delete, remote: true, id: :"like-button-#{@micropost.id}") do %>
-       <span class="fa-lg fas fa-heart icon-btn liked"><span><%= @micropost.likes.count %></span></span>
+   <%= link_to(micropost_add_path(@micropost), method: :delete, remote: true, 
+                                                   id: :"like-button-#{@micropost.id}") do %>
+        <span class="fa-lg fas fa-heart icon-btn liked"><span><%= @micropost.likes.count %></span></span>
    <% end %>
 <% else %>
-   <%= link_to(micropost_add_path(@micropost), method: :post, remote: true, id: :"like-button-#{@micropost.id}") do %>
+   <%= link_to(micropost_add_path(@micropost), method: :post, remote: true, 
+                                                   id: :"like-button-#{@micropost.id}") do %>
        <span class="fa-lg fas fa-heart icon-btn not-like"><span><%= @micropost.likes.count %></span></span>
    <% end %>
 <% end %>

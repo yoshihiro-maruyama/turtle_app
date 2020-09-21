@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy,
                                         :following, :followers]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :correct_user,   only: [:edit, :update, :destroy]
 
   def index
     @users = User.all
@@ -63,7 +63,7 @@ class UsersController < ApplicationController
 
   def facebook_login
     @user =  User.from_omniauth(request.env["omniauth.auth"])
-      result = @user.save(context: :facebook_login)
+    result = @user.save(context: :facebook_login)
       if result
         log_in @user
         redirect_to @user

@@ -1,5 +1,5 @@
 <% visitor = notification.visitor %>
 <div class="one-notice">
-<span><%= visitor.name %>さんがコメントしました。</span>
-<%= link_to "delete", notification_path(notification), method: :delete %>
+  <span><%= visitor.name %>さんがコメントしました。</span>
+  <%= link_to "delete", notification_path(notification), method: :delete %>
 </div>
